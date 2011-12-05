@@ -21,11 +21,9 @@ snippet ns
 	namespace ${1:`Filename('', 'my')`} {
 		${2}
 	} /* namespace $1 */
-
 # Class
 snippet class
-	class ${1:`Filename('$1', 'name')`} 
-	{
+	class ${1:`Filename('$1', 'name')`} {
 	public:
 		$1(${2});
 		~$1();
@@ -35,10 +33,10 @@ snippet class
 	};
 
 snippet fori
-	for (int ${2:i} = 0; $2 < ${1:count}; $2${3:++}) {
-		${4:/* code */}
+	for (${2:unsigned int} ${3:i} = 0; $3 < ${1:count}; ${4:++}$3) {
+		${5:/* code */}
 	}
-
+#
 # auto iterator
 snippet itera
 	for (auto ${1:i} = $1.begin(); $1 != $1.end(); ++$1) {
